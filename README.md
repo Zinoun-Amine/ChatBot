@@ -1,24 +1,19 @@
-# ChatOCP - Conversational RAG System for OCP Process Documentation
+# ChatBot - Conversational RAG System
 
 A full-stack conversational AI application that combines Next.js frontend, Node.js/Fastify backend, and Python RAG engine to provide intelligent, context-aware responses about OCP (Prayon) industrial processes.
 
-## 📋 System Requirements
-
-
-### OPERATING SYSTEM
-- **WINDOWS**: PowerShell (Devloped & tested on Windows)
-
+## System Requirements
 
 
 ### Hardware
-- **GPU**: NVIDIA with xxGB+ VRAM (tested on 8GB)
-- **CPU**: xx+ cores recommended (tested on 8+)
-- **RAM**: xxGB+ recommended (tested on 16GB+)
+- **GPU**: NVIDIA with xxGB+ VRAM 
+- **CPU**: xx+ cores recommended 
+- **RAM**: xxGB+ recommended 
 - **Disk**: 20GB+ for models and vector store
 
 ### Software
-- **Python**: 3.11+ (tested on 3.13)
-- **Node.js**: 18+ (tested on latest LTS)
+- **Python**: 3.11+
+- **Node.js**: 18+ 
 - **npm**: 9+
 - **Ollama**: Latest version with NVIDIA CUDA support
 - **SQLite**: 3.35+
@@ -28,7 +23,7 @@ A full-stack conversational AI application that combines Next.js frontend, Node.
 
 ---
 
-## 🚀 Installation & Setup
+##  Installation & Setup
 
 ### Step 0: Prerequisites
 
@@ -168,7 +163,7 @@ OLLAMA_HOST_URL=http://localhost:11434/
 ---
 
 
-## 📝 Accessing the Application
+##  Accessing the Application
 
 Once all services are running:
 
@@ -179,7 +174,7 @@ Once all services are running:
 
 ---
 
-## 🔌 API Endpoints
+##  API Endpoints
 
 ### Fastify Backend (localhost:4000)
 
@@ -214,7 +209,7 @@ Once all services are running:
 
 ---
 
-## 🗄️ Database Schema
+##  Database Schema
 
 SQLite database (`database.sqlite`) includes:
 
@@ -245,20 +240,20 @@ CREATE TABLE messages (
 
 ---
 
-## 🎯 Features
+##  Features
 
-- ✅ **Multi-turn Conversations** - Context-aware memory system tracks conversation history
-- ✅ **Hybrid Search** - BM25 + Semantic Search + MMR (Maximum Marginal Relevance)
-- ✅ **Advanced Reranking** - Cross-encoder model for precision retrieval
-- ✅ **GPU-Optimized** - Automatic GPU layer distribution for 8GB VRAM
-- ✅ **Secure Authentication** - JWT + HTTP-only cookies with Fastify
-- ✅ **Memory Module** - Automatic conversation summarization with LLM
-- ✅ **Message Isolation** - Each user only sees their own messages
-- ✅ **Streaming Responses** - Real-time response streaming
+- **Multi-turn Conversations** - Context-aware memory system tracks conversation history
+- **Hybrid Search** - BM25 + Semantic Search + MMR (Maximum Marginal Relevance)
+- **Advanced Reranking** - Cross-encoder model for precision retrieval
+- **GPU-Optimized** - Automatic GPU layer distribution for 8GB VRAM
+- **Secure Authentication** - JWT + HTTP-only cookies with Fastify
+- **Memory Module** - Automatic conversation summarization with LLM
+- **Message Isolation** - Each user only sees their own messages
+- **Streaming Responses** - Real-time response streaming
   
 ---
 
-## 🎓 Key Concepts
+##  Key Concepts
 
 ### Conversation Memory
 - **What**: Last 8 messages automatically loaded and summarized
@@ -275,38 +270,6 @@ CREATE TABLE messages (
 - **Purpose**: Re-score top results with more sophisticated model
 - **Model**: Cross-encoder (slower but more accurate)
 - **Output**: Final ranked documents for LLM context
-
----
-
-## 📄 License
-
-This project is part of the ChatOCP system for OCP/Prayon process documentation.
-
----
-
-## ✅ Quick Start Checklist
-
-- [ ] Install Ollama and download models
-- [ ] Install Python 3.11+ with CUDA support
-- [ ] Install Node.js 18+
-- [ ] Clone project to `c:\Users\asus\Desktop\chatocp`
-- [ ] Setup Backend: `npm install` in `/server`
-- [ ] Setup Frontend: `npm install` in `/client`
-- [ ] Setup RAG: Create venv, `pip install -r requirement.txt`
-- [ ] Create `.env` files for all three services
-- [ ] Start Ollama in Terminal 1
-- [ ] Start RAG in Terminal 2
-- [ ] Start Backend in Terminal 3
-- [ ] Start Frontend in Terminal 4
-- [ ] Open http://localhost:3000
-- [ ] Register and start chatting!
-
----
-
-**Last Updated**: December 5, 2025
-**Status**: ✅ MVP
-
-
 
 
 
