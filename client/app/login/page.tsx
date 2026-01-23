@@ -62,12 +62,12 @@ export default function LoginPage() {
         // Use cookie utils to store token and user
         cookieUtils.setToken(data.token);
         cookieUtils.setUser(data.user);
-        setStatus('✅ Login successful! Redirecting...');
+        setStatus(' Login successful! Redirecting...');
         setTimeout(() => router.push('/chatbot'), 1500);
       }
     } catch (err) {
       console.error('Network error:', err);
-      setStatus('❌ Network error. Check connection or server URL.');
+      setStatus(' Network error. Check connection or server URL.');
     } finally {
       setLoading(false);
     }
@@ -170,12 +170,12 @@ export default function LoginPage() {
             <div
               className={`mt-6 p-3 rounded-lg flex items-center gap-2 ${
                 // Status colors adjusted for dark background
-                status.startsWith("✅")
+                status.startsWith("")
                   ? "bg-green-900/50 text-green-300 border border-green-700"
                   : "bg-red-900/50 text-red-300 border border-red-700"
               }`}
             >
-              {status.startsWith("✅") ? (
+              {status.startsWith("") ? (
                 <CheckCircle size={18} />
               ) : (
                 <AlertTriangle size={18} />
