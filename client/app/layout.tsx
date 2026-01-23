@@ -1,4 +1,3 @@
-// app/layout.tsx (Server Component)
 import './globals.css';
 import { Metadata } from 'next';
 import LayoutClient from './layoutClient';
